@@ -1,8 +1,8 @@
-﻿namespace VideoGameLibary.Server.Models
+﻿namespace VideoGameLibary.Shared.Models
 {
     /// <summary>
     /// Information of video game
-    /// CreatedBy: ThiepTT(17/09/2023)
+    /// CreatedBy: ThiepTT(18/09/2023)
     /// </summary>
     public class VideoGame
     {

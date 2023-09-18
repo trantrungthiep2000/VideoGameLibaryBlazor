@@ -1,0 +1,50 @@
+﻿@page "/videogames"
+@inject HttpClient Http
+
+<h3>Video Games</h3>
+
+@if (videoGames.Count <= 0)
+{
+    <span>Loading Video Games...</span>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Publisher</th>
+                <th scope="col">ReleaseYear</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var videoGame in videoGames)
+            {
+                <tr>
+                    <td>@videoGame.Title</td>
+                    <td>@videoGame.Publisher</td>
+                    <td>@videoGame.ReleaseYear</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    List<VideoGame> videoGames = new List<VideoGame>();
+
+    /// <summary>
+    /// On initialized async
+    /// </summary>
+    /// <returns>Task</returns>
+    /// CreatedBy: ThiepTT(18/09/2023)
+    protected override async Task OnInitializedAsync()
+    {
+        var res = await Http.GetFromJsonAsync<List<VideoGame>>("api/VideoGames/GetAllVideoGames");
+
+        if (res is not null)
+        {
+            videoGames = res;
+        }
+    }
+}

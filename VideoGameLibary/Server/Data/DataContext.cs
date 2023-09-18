@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VideoGameLibary.Server.Models;
+using VideoGameLibary.Shared.Models;
 
 namespace VideoGameLibary.Server.Data
 {
     /// <summary>
     /// Information of data context
-    /// CreatedBy:ThiepTT(17/09/2023)
+    /// CreatedBy:ThiepTT(18/09/2023)
     /// </summary>
     public class DataContext : DbContext
     {

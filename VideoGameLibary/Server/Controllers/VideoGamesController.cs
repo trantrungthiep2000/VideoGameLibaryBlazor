@@ -6,7 +6,7 @@ namespace VideoGameLibary.Server.Controllers
 {
     /// <summary>
     /// Information of video games
-    /// CreatedBy: ThiepTT(17/09/2023)
+    /// CreatedBy: ThiepTT(18/09/2023)
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
@@ -23,10 +23,12 @@ namespace VideoGameLibary.Server.Controllers
         /// Get all video games
         /// </summary>
         /// <returns>IActionResult</returns>
-        /// CreatedBy: ThiepTT(17/09/2023)
+        /// CreatedBy: ThiepTT(18/09/2023)
+        [HttpGet]
+        [Route("GetAllVideoGames")]
         public async Task<IActionResult> GetAllVideoGames()
         {
-            var videoGames = await _dataContext.VideoGames.ToListAsync();
+            var videoGames = await _dataContext.VideoGames.OrderBy(vg => vg.ReleaseYear).ToListAsync();
 
             return Ok(videoGames);
         }
