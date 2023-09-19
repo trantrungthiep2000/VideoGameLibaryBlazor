@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\VideoGameLibary.Shared.csproj" />
+    <ProjectReference Include="..\..\VideoGameLibary.VideoGameModel\VideoGameLibary.VideoGameModel.csproj" />
   </ItemGroup>
 
 </Project>
