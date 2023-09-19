@@ -1,7 +1,12 @@
 ﻿@page "/videogames"
 @inject HttpClient Http
+@inject NavigationManager NavigationManager
 
-<h3>Video Games</h3>
+<h3>Video games</h3>
+
+<button @onclick="AddVideoGame" class="btn btn-primary">Add video game</button>
+<br />
+<br />
 
 @if (videoGames.Count <= 0)
 {
@@ -15,6 +20,7 @@ else
                 <th scope="col">Title</th>
                 <th scope="col">Publisher</th>
                 <th scope="col">ReleaseYear</th>
+                <th scope="col">Function</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +30,9 @@ else
                     <td>@videoGame.Title</td>
                     <td>@videoGame.Publisher</td>
                     <td>@videoGame.ReleaseYear</td>
+                    <td>
+                        <button @onclick="(() => EditVideoGame(videoGame.Id))" class="btn btn-primary">Edit</button>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -46,5 +55,24 @@ else
         {
             videoGames = res;
         }
+    }
+
+    /// <summary>
+    /// Add video game
+    /// </summary>
+    /// CreatedBy: ThiepTT(18/09/2023)
+    void AddVideoGame()
+    {
+        NavigationManager.NavigateTo("/videogame");
+    }
+
+    /// <summary>
+    /// Edit video game
+    /// </summary>
+    /// <param name="videoGameId">Id of video game</param>
+    /// CreatedBy: ThiepTT(18/09/2023)
+    void EditVideoGame(int videoGameId)
+    {
+        NavigationManager.NavigateTo($"/videogame/{videoGameId}");
     }
 }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameLibary.Server", "VideoGameLibary\Server\VideoGameLibary.Server.csproj", "{37E920C2-ABB9-4FDF-9733-9DDFDA50F8D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameLibary.Server", "VideoGameLibary\Server\VideoGameLibary.Server.csproj", "{37E920C2-ABB9-4FDF-9733-9DDFDA50F8D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameLibary.Client", "VideoGameLibary\Client\VideoGameLibary.Client.csproj", "{AEE3753C-8231-43B1-A94F-05464CD2A684}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameLibary.Client", "VideoGameLibary\Client\VideoGameLibary.Client.csproj", "{AEE3753C-8231-43B1-A94F-05464CD2A684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameLibary.Shared", "VideoGameLibary\Shared\VideoGameLibary.Shared.csproj", "{AF691F0E-E4FE-42AE-A3E7-A4E57843471A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameLibary.Shared", "VideoGameLibary\Shared\VideoGameLibary.Shared.csproj", "{AF691F0E-E4FE-42AE-A3E7-A4E57843471A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
